@@ -370,4 +370,14 @@ describe('JS Basics Tests', () => {
       });
     });
   });
+  
+  describe('Test regular expressions', () => {
+    test('should return false when domain name is not valid', () => {
+       expect(validateEmail('rakoto').toBeFalsy());
+      expect(validateEmail('rakoto@gmail.').toBeFalsy());
+      expect(validateEmail('rakoto@gmail.123').toBeFalsy());
+      expect(validateEmail('cypre.iren.rie@gmail.').toBeFalsy());
+    });
+    
+  });
 });
